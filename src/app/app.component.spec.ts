@@ -1,11 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { SwUpdate } from '@angular/service-worker';
+import { MockSwUpdate } from 'src/testing/mocks/mock-sw-update';  // Adjust the path as necessary
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [RouterTestingModule],
-    declarations: [AppComponent]
+    declarations: [AppComponent],
+    providers: [
+      { provide: SwUpdate, useClass: MockSwUpdate }  // Provide the mock SwUpdate service
+    ]
   }));
 
   it('should create the app', () => {
