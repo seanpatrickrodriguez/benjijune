@@ -3,11 +3,10 @@
   "index": "/index.html",
   "assetGroups": [
     {
-      "name": "app",
+      "name": "src",
       "installMode": "prefetch",
       "resources": {
         "files": [
-          "/favicon.ico",
           "/index.html",
           "/manifest.webmanifest",
           "/*.css",

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1717382424146,
+  "timestamp": 1717386134544,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -11,14 +11,21 @@
         "ignoreVary": true
       },
       "urls": [
-        "/142.0a689ee047cc53c9.js",
+        "/108.e0ba36423c8f7e7b.js",
+        "/142.e32e4b5b4ad1d4f5.js",
+        "/190.3c6d547c30da5fbe.js",
+        "/267.5ca648bedbb671a1.js",
+        "/356.3748368392ba5f94.js",
         "/index.html",
-        "/main.89a2f6d35358dc14.js",
-        "/polyfills.ae979b8f5d1a042f.js",
-        "/runtime.757c6d98c46fed8a.js",
+        "/main.26798cd2266e8f9b.js",
+        "/polyfills.454e57cb0d5817b9.js",
+        "/runtime.5b5fd097e2a83fd1.js",
         "/styles.4fb4dfe5377cfc43.css"
       ],
-      "patterns": []
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/.*"
+      ]
     },
     {
       "name": "assets",
@@ -27,17 +34,45 @@
       "cacheQueryOptions": {
         "ignoreVary": true
       },
-      "urls": [],
+      "urls": [
+        "/assets/benji logo cropped.png",
+        "/assets/benji logo.webp",
+        "/assets/favicon white.webp",
+        "/assets/favicon.ico"
+      ],
       "patterns": []
     }
   ],
-  "dataGroups": [],
+  "dataGroups": [
+    {
+      "name": "api",
+      "patterns": [
+        "\\/api\\/.*"
+      ],
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": 259200000,
+      "timeoutMs": 10000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
   "hashTable": {
-    "/142.0a689ee047cc53c9.js": "30b574c732b5d75613b1f808526bf4c85fe527e2",
-    "/index.html": "47978040a5764b0f3a4160720df1cd5df2b24cad",
-    "/main.89a2f6d35358dc14.js": "74f1ad767bc7804949ed7bc997f13073b26663be",
-    "/polyfills.ae979b8f5d1a042f.js": "09bcb3305b6e8d6c80673db91e837cd60ba45ea1",
-    "/runtime.757c6d98c46fed8a.js": "ea448b06de8f6a1856f2678a51e40aeed5339057",
+    "/108.e0ba36423c8f7e7b.js": "dc3c12ed32f63e489b7a6531f313a648945b5820",
+    "/142.e32e4b5b4ad1d4f5.js": "3351c8e1c14b6e846f81f27d407712186e15ac1b",
+    "/190.3c6d547c30da5fbe.js": "24ea719e9ac85b8d8c8e32df6a4ce183197b35e7",
+    "/267.5ca648bedbb671a1.js": "46b2c2209635947a63cdb04d7f750d652414afa1",
+    "/356.3748368392ba5f94.js": "799961d62d0c51fd9b9d0fa709a8c4d05131b1c2",
+    "/assets/benji logo cropped.png": "d1a022188bd6b53ae8ec95a8276e1583632f0c9d",
+    "/assets/benji logo.webp": "7166d2bac1abfde466b3a935b074dacc2dc04fe2",
+    "/assets/favicon white.webp": "6412bf1cf20b757ea0e7863f6d50e56f443b87ab",
+    "/assets/favicon.ico": "781886dce997b5305f9b002b625328678fa5bac2",
+    "/index.html": "a98c10c1a8dc8fa5a2d05c49df5bf23f24924310",
+    "/main.26798cd2266e8f9b.js": "6f23a8bf753d70b03cabf986f58ef3fe49046c9c",
+    "/polyfills.454e57cb0d5817b9.js": "de27d45d404da106625e5f647223494d25b7dc1f",
+    "/runtime.5b5fd097e2a83fd1.js": "167caeb2935dbfcdc1e20d3769c73b5fdadee78e",
     "/styles.4fb4dfe5377cfc43.css": "22a4f60d3e9d982afac5cf9f3512d8b2e4ad4e27"
   },
   "navigationUrls": [
