@@ -1,15 +1,18 @@
+/// <reference types="jasmine" />
+
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { RouterModule, provideRouter, withRouterConfig } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SwUpdate } from '@angular/service-worker';
 import { MockSwUpdate } from 'src/testing/mocks/mock-sw-update';  // Adjust the path as necessary
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
+    imports: [RouterModule.forRoot([], { useHash: true })],
     declarations: [AppComponent],
     providers: [
-      { provide: SwUpdate, useClass: MockSwUpdate }  // Provide the mock SwUpdate service
+      { provide: SwUpdate, useClass: MockSwUpdate },
+      provideRouter([{ path: '', component: AppComponent }])
     ]
   }));
 
