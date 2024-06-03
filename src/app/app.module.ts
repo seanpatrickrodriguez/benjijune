@@ -13,6 +13,7 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
+    CoreModule,
   ],
   providers: [
     provideAnimationsAsync(),
