@@ -24,14 +24,14 @@ describe('PerformanceMonitoringInterceptor', () => {
   });
 
   it('should log the request time for Firebase requests', () => {
-    const testUrl = 'https://benji-5fd54-default-rtdb.firebaseio.com/data.json';
+    const testUrl = 'https://your-firebase-project.firebaseio.com/data.json';
     const consoleSpy = spyOn(console, 'log');
-
+  
     httpClient.get(testUrl).subscribe();
-
+  
     const req = httpMock.expectOne(testUrl);
     req.flush({});
-
+  
     expect(consoleSpy).toHaveBeenCalledWith(jasmine.stringMatching(/^Firebase request for .* took \d+ ms.$/));
   });
 });
