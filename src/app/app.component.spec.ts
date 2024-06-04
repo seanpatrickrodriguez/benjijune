@@ -1,20 +1,30 @@
-/// <reference types="jasmine" />
-
+// src/app/app.component.spec.ts
 import { TestBed } from '@angular/core/testing';
-import { RouterModule, provideRouter, withRouterConfig } from '@angular/router';
 import { AppComponent } from './app.component';
-import { SwUpdate } from '@angular/service-worker';
-import { MockSwUpdate } from 'src/testing/mocks/mock-sw-update';  // Adjust the path as necessary
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { environment } from 'src/environments/environment';
+import { ServiceWorkerModule, SwUpdate } from '@angular/service-worker';
+import { Subject } from 'rxjs';
 
 describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterModule.forRoot([], { useHash: true })],
-    declarations: [AppComponent],
-    providers: [
-      { provide: SwUpdate, useClass: MockSwUpdate },
-      provideRouter([{ path: '', component: AppComponent }])
-    ]
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [
+        AppComponent
+      ],
+      imports: [
+        provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+        provideAuth(() => getAuth()),
+        ServiceWorkerModule.register('', { enabled: false })
+      ],
+      providers: [
+        { provide: SwUpdate, useValue: { available: new Subject() } }
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
+  });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
