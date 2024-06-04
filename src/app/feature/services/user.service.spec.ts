@@ -13,7 +13,7 @@ describe('UserService', () => {
       providers: [
         UserService,
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-        provideAuth(() => getAuth())
+        provideAuth(() => getAuth()),
       ]
     });
     service = TestBed.inject(UserService);

@@ -1,8 +1,7 @@
 // src/app/user.service.ts
 import { Injectable } from '@angular/core';
 import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from '@angular/fire/auth';
-import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,11 +18,11 @@ export class UserService {
   }
 
   signUp(email: string, password: string): Promise<void> {
-    return createUserWithEmailAndPassword(this.auth, email, password).then(() => {});
+    return createUserWithEmailAndPassword(this.auth, email, password).then(() => { });
   }
 
   login(email: string, password: string): Promise<void> {
-    return signInWithEmailAndPassword(this.auth, email, password).then(() => {});
+    return signInWithEmailAndPassword(this.auth, email, password).then(() => { });
   }
 
   logout(): Promise<void> {

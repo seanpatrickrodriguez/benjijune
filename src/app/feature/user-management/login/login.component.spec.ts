@@ -6,12 +6,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { HttpClientModule } from '@angular/common/http';
 
 import { LoginComponent } from './login.component';
 import { UserService } from '../../services/user.service';
-import { provideAuth, getAuth } from '@angular/fire/auth';
-import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 
 describe('LoginComponent', () => {
@@ -28,11 +27,12 @@ describe('LoginComponent', () => {
         MatInputModule,
         MatButtonModule,
         MatProgressSpinnerModule,
-        HttpClientModule,
-        provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-        provideAuth(() => getAuth())
       ],
-      providers: [UserService]
+      providers: [
+        UserService,
+        provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+        provideAuth(() => getAuth()),
+      ]
     }).compileComponents();
   });
 

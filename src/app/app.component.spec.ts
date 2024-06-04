@@ -11,15 +11,13 @@ import { Subject } from 'rxjs';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
       imports: [
-        provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-        provideAuth(() => getAuth()),
         ServiceWorkerModule.register('', { enabled: false })
       ],
       providers: [
+        provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+        provideAuth(() => getAuth()),
         { provide: SwUpdate, useValue: { available: new Subject() } }
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]

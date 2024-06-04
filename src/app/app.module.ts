@@ -13,8 +13,8 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
-import { CoreModule } from './core/core.module';
-import { UserManagementModule } from './feature/user-management/user-management.module';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,7 +22,9 @@ import { UserManagementModule } from './feature/user-management/user-management.
     AppComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: true,
@@ -30,8 +32,6 @@ import { UserManagementModule } from './feature/user-management/user-management.
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    CoreModule,
-    UserManagementModule,
   ],
   providers: [
     provideAnimationsAsync(),

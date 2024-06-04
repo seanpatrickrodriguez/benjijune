@@ -1,5 +1,5 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -7,9 +7,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ReactiveFormsModule,
   ],
-  exports: [ 
+  exports: [
     CommonModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
 })
 export class CoreModule {
