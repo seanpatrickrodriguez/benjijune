@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -17,16 +18,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
   ],
   imports: [
-    UserManagementRoutingModule,
+    CommonModule,
     ReactiveFormsModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    UserManagementRoutingModule,
   ],
   exports: [
     UserManagementComponent
-  ]
+  ],
 })
 export class UserManagementModule { }
