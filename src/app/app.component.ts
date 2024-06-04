@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SwUpdate } from '@angular/service-worker';
 
 @Component({
@@ -9,7 +10,10 @@ import { SwUpdate } from '@angular/service-worker';
 export class AppComponent implements OnInit {
   title = 'benji';
 
-  constructor(private swUpdate: SwUpdate) { }
+  constructor(
+    private swUpdate: SwUpdate,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
     if (this.swUpdate.isEnabled) {
@@ -41,5 +45,6 @@ export class AppComponent implements OnInit {
         console.log('Controller changed');
       });
     }
+
   }
 }

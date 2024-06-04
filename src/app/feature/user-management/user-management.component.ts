@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-user-management',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrl: './user-management.component.scss'
 })
 export class UserManagementComponent {
+  constructor(private userService: UserService) { }
 
+  login() {
+    this.userService.login('newuser@example.com', '@Abc1234');
+  }
+
+  logout() {
+    this.userService.logout();
+  }
+
+  signUp() {
+    this.userService.signUp('newuser@example.com', '@Abc1234');
+  }
 }

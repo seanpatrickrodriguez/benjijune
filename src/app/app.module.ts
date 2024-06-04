@@ -14,6 +14,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { CoreModule } from './core/core.module';
+import { UserManagementModule } from './feature/user-management/user-management.module';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { CoreModule } from './core/core.module';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     CoreModule,
+    UserManagementModule,
   ],
   providers: [
     provideAnimationsAsync(),
