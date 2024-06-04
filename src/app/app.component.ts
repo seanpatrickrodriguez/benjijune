@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
-import { AppInitService } from './core/services/app-init.service';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +9,9 @@ import { AppInitService } from './core/services/app-init.service';
 export class AppComponent implements OnInit {
   title = 'benji';
 
-  constructor(private swUpdate: SwUpdate, private appInitService: AppInitService) { }
+  constructor(private swUpdate: SwUpdate) { }
 
   ngOnInit() {
-    this.appInitService.initializeApp();
     if (this.swUpdate.isEnabled) {
       this.swUpdate.versionUpdates.subscribe(evt => {
         switch (evt.type) {

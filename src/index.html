@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Benji</title>
@@ -13,13 +14,17 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-278YF4QQ79"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-278YF4QQ79');
+    gtag('config', 'G-278YF4QQ79', { 
+      cookie_domain: '.benji-5fd54.web.app',
+      cookie_flags: 'SameSite=None; Secure' });
   </script>
 </head>
+
 <body class="mat-typography">
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
+
 </html>

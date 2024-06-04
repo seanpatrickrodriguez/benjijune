@@ -24,7 +24,7 @@ describe('PerformanceMonitoringInterceptor', () => {
   });
 
   it('should log the request time for Firebase requests', () => {
-    const testUrl = 'https://your-firebase-project.firebaseio.com/data.json';
+    const testUrl = 'https://benji-5fd54-default-rtdb.firebaseio.com/data.json';
     const consoleSpy = spyOn(console, 'log');
   
     httpClient.get(testUrl).subscribe();
