@@ -12,7 +12,6 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { UserManagementModule } from './feature/user-management/user-management.module';
 
 
 @NgModule({
@@ -20,12 +19,11 @@ import { UserManagementModule } from './feature/user-management/user-management.
   imports: [
     AppRoutingModule,
     BrowserModule,
+    CoreModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    UserManagementModule,
-    CoreModule,
   ],
   providers: [
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
