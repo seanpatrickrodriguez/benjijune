@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.router.navigate(['/user-management'])
     if (this.swUpdate.isEnabled) {
       this.swUpdate.versionUpdates.subscribe(evt => {
         switch (evt.type) {

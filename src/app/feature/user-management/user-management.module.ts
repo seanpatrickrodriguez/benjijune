@@ -9,7 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { LoginComponent } from './login/login.component';
-import { CoreModule } from 'src/app/core/core.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,8 @@ import { CoreModule } from 'src/app/core/core.module';
     LoginComponent,
   ],
   imports: [
-    CoreModule,
     UserManagementRoutingModule,
+    ReactiveFormsModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,

@@ -1,10 +1,14 @@
 // src/app/feature/user-management/user-management.component.spec.ts
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { UserManagementComponent } from './user-management.component';
-import { UserService } from '../services/user.service';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { environment } from 'src/environments/environment';
-import { getAuth, provideAuth } from '@angular/fire/auth';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from '../services/user.service';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('UserManagementComponent', () => {
   let component: UserManagementComponent;
@@ -12,12 +16,20 @@ describe('UserManagementComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UserManagementComponent],
-      providers: [
-        UserService,
+      declarations: [
+        UserManagementComponent,
+        LoginComponent
+      ],
+      imports: [
+        ReactiveFormsModule,
+        HttpClientModule,
+
+      ],
+      providers: [UserService,
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-        provideAuth(() => getAuth()),
-      ]
+        provideAuth(() => getAuth())
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   });
 

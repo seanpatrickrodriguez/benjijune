@@ -1,11 +1,8 @@
-import { NgModule, isDevMode } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-
 
 import { environment } from 'src/environments/environment';
 
@@ -13,32 +10,28 @@ import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
-import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { CoreModule } from './core/core.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { UserManagementModule } from './feature/user-management/user-management.module';
 
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    CommonModule,
-    BrowserModule,
-    ReactiveFormsModule,
     AppRoutingModule,
+    BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: true,
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
+      enabled: environment.production,
       registrationStrategy: 'registerWhenStable:30000'
     }),
+    UserManagementModule,
+    CoreModule,
   ],
   providers: [
-    provideAnimationsAsync(),
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage()),
+    provideStorage(() => getStorage())
   ],
   bootstrap: [AppComponent]
 })

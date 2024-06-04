@@ -19,6 +19,10 @@ export class LoginComponent {
     });
   }
 
+  getCurrentUser() { 
+    return this.userService.getCurrentUser();
+  }
+
   onSubmit() {
     if (this.loginForm.valid) {
       this.isLoading = true;

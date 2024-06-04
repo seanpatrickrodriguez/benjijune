@@ -12,6 +12,7 @@ import { UserService } from '../../services/user.service';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -30,6 +31,7 @@ describe('LoginComponent', () => {
       ],
       providers: [
         UserService,
+        provideAnimationsAsync(),
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
         provideAuth(() => getAuth()),
       ]

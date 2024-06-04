@@ -28,4 +28,7 @@ export class UserService {
   logout(): Promise<void> {
     return signOut(this.auth);
   }
+  getCurrentUser() {
+    return this.auth.currentUser;
+  }
 }
