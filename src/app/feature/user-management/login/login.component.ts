@@ -1,7 +1,6 @@
 // src/app/feature/user-management/login/login.component.ts
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from '../../../core/services/user.service';
 import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
@@ -15,17 +14,12 @@ export class LoginComponent {
 
   constructor(
     private fb: FormBuilder,
-    private userService: UserService,
     private authService: AuthService,
   ) {
     this.loginForm = this.fb.group({
       email: ['newuser@example.com', [Validators.required, Validators.email]],
       password: ['@Abc1234', [Validators.required, Validators.minLength(6)]]
     });
-  }
-
-  getCurrentUser() {
-    return this.userService.getCurrentUser();
   }
 
   onSubmit() {

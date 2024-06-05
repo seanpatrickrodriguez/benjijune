@@ -8,11 +8,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { LoginComponent } from './login.component';
-import { UserService } from '../../../core/services/user.service';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -30,7 +30,7 @@ describe('LoginComponent', () => {
         MatProgressSpinnerModule,
       ],
       providers: [
-        UserService,
+        AuthService,
         provideAnimationsAsync(),
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
         provideAuth(() => getAuth()),

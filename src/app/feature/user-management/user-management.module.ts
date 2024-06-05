@@ -27,8 +27,6 @@ import { CommonModule } from '@angular/common';
     MatProgressSpinnerModule,
     UserManagementRoutingModule,
   ],
-  exports: [
-    UserManagementComponent
-  ],
+
 })
 export class UserManagementModule { }
