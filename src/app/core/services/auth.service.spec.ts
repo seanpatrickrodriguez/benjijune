@@ -1,9 +1,8 @@
-// src/app/services/auth.service.spec.ts
 import { TestBed } from '@angular/core/testing';
 import { AuthService } from './auth.service';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-import { environment } from 'src/environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
+import { environment } from 'src/environments/environment';
 
 describe('AuthService', () => {
   let service: AuthService;
@@ -13,7 +12,7 @@ describe('AuthService', () => {
       providers: [
         AuthService,
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-        provideAuth(() => getAuth())
+        provideAuth(() => getAuth()),
       ]
     });
     service = TestBed.inject(AuthService);

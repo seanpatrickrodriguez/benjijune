@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { Auth, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { getAuth, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -10,24 +10,17 @@ import { Auth, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 export class AuthService {
   private authState = new BehaviorSubject<boolean>(false);
 
-  constructor(private router: Router,
-    private auth: Auth,
-  ) {
-    console.log('AuthService constructed')
-
+  constructor(private router: Router) {
+    const auth = getAuth();
     auth.onAuthStateChanged(user => {
-      console.log(`AuthService onAuthStateChanged ${user}`)
-      if (user) {
-        this.authState.next(true);
-      } else {
-        this.router.navigate(['/user-management']);
-        this.authState.next(false);
-      }
+      this.authState.next(!!user);
+      console.log('AuthService onAuthStateChanged', user);
     });
   }
 
   login(email: string, password: string): Promise<void> {
-    return signInWithEmailAndPassword(this.auth, email, password)
+    const auth = getAuth();
+    return signInWithEmailAndPassword(auth, email, password)
       .then(() => {
         this.authState.next(true);
         this.router.navigate(['/home']);
@@ -35,7 +28,11 @@ export class AuthService {
   }
 
   logout(): Promise<void> {
-    return signOut(this.auth).then(() => { });
+    const auth = getAuth();
+    return signOut(auth).then(() => {
+      this.authState.next(false);
+      this.router.navigate(['/login']);
+    });
   }
 
   isAuthenticated(): boolean {
@@ -44,5 +41,9 @@ export class AuthService {
 
   getAuthState() {
     return this.authState.asObservable();
+  }
+
+  getCurrentUser() {
+    return getAuth().currentUser;
   }
 }
