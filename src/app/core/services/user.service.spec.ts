@@ -1,9 +1,9 @@
 // src/app/services/user.service.spec.ts
 import { TestBed } from '@angular/core/testing';
 import { UserService } from './user.service';
-import { provideAuth, getAuth, Auth } from '@angular/fire/auth';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { environment } from 'src/environments/environment';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 
 describe('UserService', () => {
   let service: UserService;
