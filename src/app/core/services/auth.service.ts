@@ -13,12 +13,7 @@ export class AuthService {
   constructor(private router: Router, private auth: Auth) {
     onAuthStateChanged(this.auth, user => {
       this.authState.next(!!user);
-    });
-    this.authState.subscribe((authState) => {
-      if (authState) {
-      } else {
-        this.router.navigate(['/user-management']);
-      }
+      if (!user) this.router.navigate(['/user-management']);
     });
   }
 
@@ -47,5 +42,9 @@ export class AuthService {
 
   getCurrentUser() {
     return this.auth.currentUser;
+  }
+
+  getAuth() {
+    return this.auth;
   }
 }

@@ -1,5 +1,5 @@
 /* src/app/feature/user-management/login/login.component.scss */
-.login-container {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,7 @@ mat-card {
   max-width: 400px;
 }
 
-.login-actions {
+.actions {
   display: flex;
   justify-content: flex-end;
   margin-top: 16px;
