@@ -1,34 +1,23 @@
 // src/app/user.service.ts
 import { Injectable } from '@angular/core';
-import { Auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from '@angular/fire/auth';
-import { Observable } from 'rxjs';
+import { Auth, onAuthStateChanged } from '@angular/fire/auth';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  user$: Observable<any>;
+  user = new BehaviorSubject<any>(null);
 
   constructor(private auth: Auth) {
-    this.user$ = new Observable(observer => {
-      onAuthStateChanged(this.auth, user => {
-        observer.next(user);
-      });
+    onAuthStateChanged(this.auth, user => {
+      this.user.next(user);
     });
   }
 
-  signUp(email: string, password: string): Promise<void> {
-    return createUserWithEmailAndPassword(this.auth, email, password).then(() => { });
-  }
 
-  login(email: string, password: string): Promise<void> {
-    return signInWithEmailAndPassword(this.auth, email, password).then(() => { });
-  }
 
-  logout(): Promise<void> {
-    return signOut(this.auth);
-  }
   getCurrentUser() {
-    return this.auth.currentUser;
+    return this.user.value;
   }
 }

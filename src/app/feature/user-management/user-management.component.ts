@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../../core/services/user.service';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-user-management',
@@ -7,17 +8,17 @@ import { UserService } from '../../core/services/user.service';
   styleUrl: './user-management.component.scss'
 })
 export class UserManagementComponent {
-  constructor(private userService: UserService) { }
+  constructor(private authService: AuthService) { }
 
   login() {
-    this.userService.login('newuser@example.com', '@Abc1234');
+    this.authService.login('newuser@example.com', '@Abc1234');
   }
 
   logout() {
-    this.userService.logout();
+    this.authService.logout();
   }
 
   signUp() {
-    this.userService.signUp('newuser@example.com', '@Abc1234');
+    this.authService.signUp('newuser@example.com', '@Abc1234');
   }
 }
