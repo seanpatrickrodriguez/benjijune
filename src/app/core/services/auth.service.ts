@@ -1,50 +1,65 @@
 // src/app/services/auth.service.ts
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
-import { Auth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { BehaviorSubject, Observable, from } from 'rxjs';
+import {
+  Auth,
+  User,
+  UserCredential,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+  signOut,
+} from '@angular/fire/auth';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   private authState = new BehaviorSubject<boolean>(false);
 
-  constructor(private router: Router, private auth: Auth) {
-    onAuthStateChanged(this.auth, user => {
+  constructor(
+    private router: Router,
+    private auth: Auth,
+  ) {
+    this.authStateGuard();
+  }
+
+  signIn(email: string, password: string): Promise<void> {
+    return signInWithEmailAndPassword(this.auth, email, password).then(() => {
+      this.router.navigate(['/home']);
+    });
+  }
+
+  logOut(): Observable<void> {
+    return from(signOut(this.auth));
+  }
+
+  register(email: string, password: string): Observable<UserCredential> {
+    return from(createUserWithEmailAndPassword(this.auth, email, password));
+  }
+
+  sendPasswordResetEmail(email: string): Observable<void> {
+    return from(sendPasswordResetEmail(this.auth, email));
+  }
+
+  authStateGuard(): void {
+    onAuthStateChanged(this.auth, (user) => {
       this.authState.next(!!user);
       if (!user) this.router.navigate(['/user-management']);
     });
   }
 
-  login(email: string, password: string): Promise<void> {
-    return signInWithEmailAndPassword(this.auth, email, password)
-      .then(() => {
-        this.router.navigate(['/home']);
-      });
-  }
-
-  logout(): Promise<void> {
-    return signOut(this.auth).then(() => { });
-  }
-
-  signUp(email: string, password: string): Promise<void> {
-    return createUserWithEmailAndPassword(this.auth, email, password).then(() => { });
-  }
-
-  isAuthenticated(): boolean {
-    return this.authState.value;
-  }
-
-  getAuthState() {
+  getAuthState(): Observable<boolean> {
     return this.authState.asObservable();
   }
 
-  getCurrentUser() {
+  getCurrentUser(): User | null {
     return this.auth.currentUser;
   }
 
-  getAuth() {
+  getAuth(): Auth {
     return this.auth;
   }
 }

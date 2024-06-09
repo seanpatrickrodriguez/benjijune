@@ -26,7 +26,7 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       this.isLoading = true;
       const { email, password } = this.loginForm.value;
-      this.authService.login(email, password)
+      this.authService.signIn(email, password)
         .then(() => {
           this.isLoading = false;
           // Handle successful login

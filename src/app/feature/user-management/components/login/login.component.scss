@@ -11,6 +11,11 @@ mat-card {
   max-width: 400px;
 }
 
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .actions {
   display: flex;
   justify-content: flex-end;

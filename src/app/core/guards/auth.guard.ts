@@ -2,16 +2,24 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { catchError, from, map, of, tap } from 'rxjs';
 
 export const authGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
   const authService = inject(AuthService);
 
-  console.log('Checking auth')
-  if (!authService.isAuthenticated()) {
-    console.log(`'AuthGuard isAuthenticated ${authService.isAuthenticated()}`)
-    router.navigate(['/user-management']);
-    return false;
-  }
-  return true;
-}
+  console.log('Guest Guard');
+
+  return from(authService.getAuthState()).pipe(
+    tap(authState => {
+      if (!authState) {
+        router.navigate(['/user-management']);
+      }
+    }),
+    map(authState => authState), // Allow access if the user is not authenticated
+    catchError(error => {
+      console.error('Error checking authentication state', error);
+      return of(false); // In case of an error, deny access
+    })
+  );
+};

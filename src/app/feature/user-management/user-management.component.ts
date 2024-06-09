@@ -11,14 +11,14 @@ export class UserManagementComponent {
   constructor(private authService: AuthService) { }
 
   login() {
-    this.authService.login('newuser@example.com', '@Abc1234');
+    this.authService.signIn('newuser@example.com', '@Abc1234');
   }
 
   logout() {
-    this.authService.logout();
+    this.authService.logOut();
   }
 
   signUp() {
-    this.authService.signUp('newuser@example.com', '@Abc1234');
+    this.authService.register('newuser@example.com', '@Abc1234');
   }
 }
