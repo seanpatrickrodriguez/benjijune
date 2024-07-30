@@ -74,3 +74,23 @@
 [warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
 [debug] [2024-07-30T16:29:30.509Z] Could not find functions.yaml. Must use http discovery
 [debug] [2024-07-30T16:29:30.523Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8227
+
+[debug] [2024-07-30T16:29:30.867Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 

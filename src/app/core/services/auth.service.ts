@@ -1,7 +1,7 @@
 // src/app/services/auth.service.ts
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable, from } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, from, of, tap } from 'rxjs';
 import {
   Auth,
   User,
@@ -27,10 +27,14 @@ export class AuthService {
     this.authStateGuard();
   }
 
-  signIn(email: string, password: string): Promise<void> {
-    return signInWithEmailAndPassword(this.auth, email, password).then(() => {
-      this.router.navigate(['/home']);
-    });
+  signIn(email: string, password: string): Observable<UserCredential> {
+    return from(signInWithEmailAndPassword(this.auth, email, password)).pipe(
+      tap(() => this.router.navigate(['/home'])),
+      catchError((error) => {
+        console.error('Sign-in error:', error);
+        return of(); // Handle error appropriately
+      }),
+    );
   }
 
   logOut(): Observable<void> {
@@ -38,11 +42,23 @@ export class AuthService {
   }
 
   register(email: string, password: string): Observable<UserCredential> {
-    return from(createUserWithEmailAndPassword(this.auth, email, password));
+    return from(
+      createUserWithEmailAndPassword(this.auth, email, password),
+    ).pipe(
+      catchError((error) => {
+        console.error('Registration error:', error);
+        throw error; // Re-throw or handle the error appropriately
+      }),
+    );
   }
 
   sendPasswordResetEmail(email: string): Observable<void> {
-    return from(sendPasswordResetEmail(this.auth, email));
+    return from(sendPasswordResetEmail(this.auth, email)).pipe(
+      catchError((error) => {
+        console.error('Password reset error:', error);
+        return of(); // Handle error appropriately
+      }),
+    );
   }
 
   authStateGuard(): void {
