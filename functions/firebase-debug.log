@@ -1,47 +1,44 @@
-[debug] [2024-07-30T15:06:12.450Z] ----------------------------------------------------------------------
-[debug] [2024-07-30T15:06:12.453Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\sean5\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
-[debug] [2024-07-30T15:06:12.453Z] CLI Version:   13.10.2
-[debug] [2024-07-30T15:06:12.454Z] Platform:      win32
-[debug] [2024-07-30T15:06:12.454Z] Node Version:  v22.2.0
-[debug] [2024-07-30T15:06:12.454Z] Time:          Tue Jul 30 2024 10:06:12 GMT-0500 (Central Daylight Time)
-[debug] [2024-07-30T15:06:12.454Z] ----------------------------------------------------------------------
+[debug] [2024-07-30T16:29:25.473Z] ----------------------------------------------------------------------
+[debug] [2024-07-30T16:29:25.475Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\sean5\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2024-07-30T16:29:25.476Z] CLI Version:   13.10.2
+[debug] [2024-07-30T16:29:25.476Z] Platform:      win32
+[debug] [2024-07-30T16:29:25.476Z] Node Version:  v22.2.0
+[debug] [2024-07-30T16:29:25.476Z] Time:          Tue Jul 30 2024 11:29:25 GMT-0500 (Central Daylight Time)
+[debug] [2024-07-30T16:29:25.477Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-07-30T15:06:12.457Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2024-07-30T15:06:12.575Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-30T16:29:25.552Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] Failed to authenticate, have you run firebase login?
 [warn] !  emulators: You are not currently authenticated so some features may not work correctly. Please run firebase login to authenticate the CLI. 
 [info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
-[debug] [2024-07-30T15:06:12.600Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-07-30T15:06:12.601Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[debug] [2024-07-30T15:06:12.604Z] [hub] writing locator at C:\Users\sean5\AppData\Local\Temp\hub-benji-5fd54.json
-[debug] [2024-07-30T15:06:12.621Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-07-30T15:06:12.621Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-07-30T15:06:12.621Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[debug] [2024-07-30T16:29:28.594Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-07-30T16:29:28.595Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-07-30T16:29:28.599Z] [hub] writing locator at C:\Users\sean5\AppData\Local\Temp\hub-benji-5fd54.json
+[debug] [2024-07-30T16:29:28.611Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-07-30T16:29:28.612Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-07-30T16:29:28.612Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
 [warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
 [warn] !  functions: You are not signed in to the Firebase CLI. If you have authorized this machine using gcloud application-default credentials those may be discovered and used to access production services. {"metadata":{"emulator":{"name":"functions"},"message":"You are not signed in to the Firebase CLI. If you have authorized this machine using gcloud application-default credentials those may be discovered and used to access production services."}}
-[debug] [2024-07-30T15:06:12.624Z] > refreshing access token with scopes: []
-[debug] [2024-07-30T15:06:12.625Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2024-07-30T15:06:12.625Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-07-30T15:06:12.701Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2024-07-30T15:06:12.701Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
-[debug] [2024-07-30T15:06:12.720Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
-[debug] [2024-07-30T15:06:12.721Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-07-30T15:06:12.721Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/benji-5fd54/adminSdkConfig [none]
-[debug] [2024-07-30T15:06:12.843Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/benji-5fd54/adminSdkConfig 401
-[debug] [2024-07-30T15:06:12.844Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/benji-5fd54/adminSdkConfig {"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"method":"google.firebase.service.v1beta1.FirebaseProjectService.GetAdminSdkConfig","service":"firebase.googleapis.com"}}]}}
-[debug] [2024-07-30T15:06:12.844Z] Failed to get Admin SDK config for benji-5fd54, falling back to cache Failed to get Admin SDK for Firebase project benji-5fd54. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project benji-5fd54. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"method":"google.firebase.service.v1beta1.FirebaseProjectService.GetAdminSdkConfig","service":"firebase.googleapis.com"}}]}},"response":{"statusCode":401}},"exit":1,"message":"HTTP Error: 401, Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":401},"status":500}
+[debug] [2024-07-30T16:29:28.616Z] > refreshing access token with scopes: []
+[debug] [2024-07-30T16:29:28.618Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-07-30T16:29:28.618Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-30T16:29:28.814Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-07-30T16:29:28.814Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-30T16:29:28.814Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/benji-5fd54/adminSdkConfig [none]
+[debug] [2024-07-30T16:29:29.014Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/benji-5fd54/adminSdkConfig 401
+[debug] [2024-07-30T16:29:29.014Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/benji-5fd54/adminSdkConfig {"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"method":"google.firebase.service.v1beta1.FirebaseProjectService.GetAdminSdkConfig","service":"firebase.googleapis.com"}}]}}
+[debug] [2024-07-30T16:29:29.015Z] Failed to get Admin SDK config for benji-5fd54, falling back to cache Failed to get Admin SDK for Firebase project benji-5fd54. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project benji-5fd54. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"method":"google.firebase.service.v1beta1.FirebaseProjectService.GetAdminSdkConfig","service":"firebase.googleapis.com"}}]}},"response":{"statusCode":401}},"exit":1,"message":"HTTP Error: 401, Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":401},"status":500}
 [warn] !  functions: Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect. {"metadata":{"emulator":{"name":"functions"},"message":"Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect."}}
-[debug] [2024-07-30T15:06:12.858Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2024-07-30T15:06:12.858Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2024-07-30T15:06:12.858Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\sean5\\.cache\\firebase\\emulators\\ui-v1.12.1\\server\\server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\sean5\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.12.1\\\\server\\\\server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false}"}}
+[debug] [2024-07-30T16:29:29.024Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-07-30T16:29:29.024Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-07-30T16:29:29.024Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\sean5\\.cache\\firebase\\emulators\\ui-v1.12.1\\server\\server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\sean5\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.12.1\\\\server\\\\server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false}"}}
 [info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2024-07-30T15:06:13.036Z] Web / API server started at 127.0.0.1:4000
+[debug] [2024-07-30T16:29:29.169Z] Web / API server started at 127.0.0.1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
-[debug] [2024-07-30T15:06:13.037Z] Web / API server started at ::1:4000
+[debug] [2024-07-30T16:29:29.170Z] Web / API server started at ::1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
 [info] i  functions: Watching "C:\Users\sean5\Desktop\BENJI\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\sean5\\Desktop\\BENJI\\functions\" for Cloud Functions..."}}
-[debug] [2024-07-30T15:06:13.087Z] Validating nodejs source
-[debug] [2024-07-30T15:06:14.305Z] > [functions] package.json contents: {
+[debug] [2024-07-30T16:29:29.248Z] Validating nodejs source
+[debug] [2024-07-30T16:29:30.506Z] > [functions] package.json contents: {
   "name": "functions",
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
@@ -72,71 +69,8 @@
   },
   "private": true
 }
-[debug] [2024-07-30T15:06:14.306Z] Building nodejs source
-[debug] [2024-07-30T15:06:14.306Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[debug] [2024-07-30T16:29:30.506Z] Building nodejs source
+[debug] [2024-07-30T16:29:30.507Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
 [warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
-[debug] [2024-07-30T15:06:14.308Z] Could not find functions.yaml. Must use http discovery
-[debug] [2024-07-30T15:06:14.317Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
-[info] Serving at port 8216
-
-[debug] [2024-07-30T15:06:14.692Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
-[debug] [2024-07-30T15:06:14.840Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
-[debug] [2024-07-30T15:06:14.843Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
-[debug] [2024-07-30T15:06:15.852Z] Validating nodejs source
-[debug] [2024-07-30T15:06:16.926Z] > [functions] package.json contents: {
-  "name": "functions",
-  "scripts": {
-    "lint": "eslint --ext .js,.ts .",
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "serve": "npm run build && firebase emulators:start --only functions",
-    "shell": "npm run build && firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "18"
-  },
-  "main": "lib/index.js",
-  "dependencies": {
-    "firebase-admin": "^12.1.0",
-    "firebase-functions": "^5.0.0"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
-    "eslint": "^8.9.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-import": "^2.25.4",
-    "firebase-functions-test": "^3.1.0",
-    "typescript": "^4.9.0"
-  },
-  "private": true
-}
-[debug] [2024-07-30T15:06:16.926Z] Building nodejs source
-[debug] [2024-07-30T15:06:16.926Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
-[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
-[debug] [2024-07-30T15:06:16.928Z] Could not find functions.yaml. Must use http discovery
-[debug] [2024-07-30T15:06:16.936Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
-[info] Serving at port 8317
-
-[debug] [2024-07-30T15:06:17.210Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
-[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
-[info] 
-┌─────────────────────────────────────────────────────────────┐
-│ ✔  All emulators ready! It is now safe to connect your app. │
-│ i  View Emulator UI at http://127.0.0.1:4000/               │
-└─────────────────────────────────────────────────────────────┘
-
-┌───────────┬────────────────┬─────────────────────────────────┐
-│ Emulator  │ Host:Port      │ View in Emulator UI             │
-├───────────┼────────────────┼─────────────────────────────────┤
-│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
-└───────────┴────────────────┴─────────────────────────────────┘
-  Emulator Hub running at 127.0.0.1:4400
-  Other reserved ports: 4500
-
-Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
- 
-[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-07-30T16:29:30.509Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-07-30T16:29:30.523Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
