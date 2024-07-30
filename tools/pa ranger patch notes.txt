@@ -1,0 +1,5 @@
+harvesting no anim
+skinning no anim
+endurance/stam gain while meleeing, should be nerfed? would affect kiting decision
+mob im actively killing leashed (hit once every 1-2 seconds / within only bow range)
+some mobs react too dumbly to players moving in and out of ability range, making something like ranger kiting trivial

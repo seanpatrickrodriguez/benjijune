@@ -12,12 +12,14 @@ import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 @NgModule({
   declarations: [
     UserManagementComponent,
     LoginComponent,
     ResetPasswordComponent,
+    VerifyEmailComponent,
   ],
   imports: [
     CommonModule,

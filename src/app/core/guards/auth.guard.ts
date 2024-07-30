@@ -16,7 +16,7 @@ export const authGuard: CanActivateFn = (route, state) => {
         router.navigate(['/user-management']);
       }
     }),
-    map(authState => authState), // Allow access if the user is not authenticated
+    map(authState => authState), // Allow access if the user is authenticated
     catchError(error => {
       console.error('Error checking authentication state', error);
       return of(false); // In case of an error, deny access
