@@ -45,15 +45,15 @@ export const ERRORS                                      : { [key         : stri
   'functions/internal'                                   : 'An unexpected error occurred.',
   'permission-denied'                                    : 'Permission denied.',
   //
-  required                                               : 'This field is required.',
-  email                                                  : 'Invalid email.',
-  noPasswordMatch                                        : 'Passwords must match.',
-  noEmailMatch                                           : 'Emails must match.',
-  passwordHasMinLength                                   : 'Eight (8) characters',
-  passwordHasUpperCase                                   : 'One (1) uppercase letter',
-  passwordHasLowerCase                                   : 'One (1) lowercase letter',
-  passwordHasNumeric                                     : 'One (1) number',
-  passwordHasSpecialChar                                 : 'One (1) symbol or special character',
+  'required'                                               : 'This field is required.',
+  'email'                                                  : 'Invalid email.',
+  'noPasswordMatch'                                        : 'Passwords must match.',
+  'noEmailMatch'                                           : 'Emails must match.',
+  'passwordHasMinLength'                                   : 'Eight (8) characters',
+  'passwordHasUpperCase'                                   : 'One (1) uppercase letter',
+  'passwordHasLowerCase'                                   : 'One (1) lowercase letter',
+  'passwordHasNumeric'                                     : 'One (1) number',
+  'passwordHasSpecialChar'                                 : 'One (1) symbol or special character',
 };
 
 // Forms

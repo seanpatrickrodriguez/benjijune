@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { AccountRecoveryComponent } from './components/account-recovery/account-recovery.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
     LoginComponent,
     ResetPasswordComponent,
     VerifyEmailComponent,
+    AccountRecoveryComponent,
   ],
   imports: [
     CommonModule,

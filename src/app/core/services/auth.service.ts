@@ -29,11 +29,9 @@ export class AuthService {
 
   signIn(email: string, password: string): Observable<UserCredential> {
     return from(signInWithEmailAndPassword(this.auth, email, password)).pipe(
-      tap(() => this.router.navigate(['/home'])),
-      catchError((error) => {
-        console.error('Sign-in error:', error);
-        return of(); // Handle error appropriately
-      }),
+      tap(() => {
+        this.router.navigate(['/home']);
+      })
     );
   }
 

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VerifyEmailComponent } from './verify-email.component';
+import { AccountRecoveryComponent } from './account-recovery.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -13,13 +13,13 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 
-describe('VerifyEmailComponent', () => {
-  let component: VerifyEmailComponent;
-  let fixture: ComponentFixture<VerifyEmailComponent>;
+describe('AccountRecoveryComponent', () => {
+  let component: AccountRecoveryComponent;
+  let fixture: ComponentFixture<AccountRecoveryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [VerifyEmailComponent],
+      declarations: [AccountRecoveryComponent],
       imports: [
         ReactiveFormsModule,
         MatCardModule,
@@ -36,8 +36,8 @@ describe('VerifyEmailComponent', () => {
       ]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(VerifyEmailComponent);
+
+    fixture = TestBed.createComponent(AccountRecoveryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
