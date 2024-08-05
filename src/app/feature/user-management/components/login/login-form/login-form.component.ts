@@ -9,18 +9,22 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginFormComponent {
   @Output() login = new EventEmitter<{ username: string; password: string }>();
-  loginForm: FormGroup;
-
+  form: FormGroup;
+  showPassword = false;
   constructor(private fb: FormBuilder) {
-    this.loginForm = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required],
+    this.form = this.fb.group({
+      username: ['newuser@example.com', Validators.required],
+      password: ['@Abc1234', Validators.required],
     });
   }
 
+  togglePassword(): void {
+    this.showPassword = !this.showPassword;
+  }
+
   submitForm() {
-    if (this.loginForm.valid) {
-      this.login.emit(this.loginForm.value);
+    if (this.form.valid) {
+      this.login.emit(this.form.value);
     }
   }
 }

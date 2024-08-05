@@ -4,7 +4,9 @@ import { UserManagementRoutingModule } from './user-management-routing.module';
 import { UserManagementComponent } from './user-management.component';
 
 import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -17,6 +19,7 @@ import { RecoverEmailComponent } from './components/recover-email/recover-email.
 import { SendPasswordResetEmailComponent } from './components/send-password-reset-email/send-password-reset-email.component';
 import { SetNewPasswordComponent } from './components/set-new-password/set-new-password.component';
 import { LoginFormComponent } from './components/login/login-form/login-form.component';
+import { SplashComponent } from './components/splash/splash.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +30,16 @@ import { LoginFormComponent } from './components/login/login-form/login-form.com
     RecoverEmailComponent,
     SendPasswordResetEmailComponent,
     SetNewPasswordComponent,
+    SplashComponent,
     LoginFormComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     MatCardModule,
+    MatDividerModule,
     MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
     MatButtonModule,
     MatProgressSpinnerModule,

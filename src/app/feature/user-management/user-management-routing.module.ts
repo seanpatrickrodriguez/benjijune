@@ -6,6 +6,7 @@ import { AccountRecoveryComponent } from './components/account-recovery/account-
 import { RecoverEmailComponent } from './components/recover-email/recover-email.component';
 import { SendPasswordResetEmailComponent } from './components/send-password-reset-email/send-password-reset-email.component';
 import { SetNewPasswordComponent } from './components/set-new-password/set-new-password.component';
+import { SplashComponent } from './components/splash/splash.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,7 +19,7 @@ const routes: Routes = [
       { path: 'recover-email', component: RecoverEmailComponent },
     ]
   },
-  { path: '', component: UserManagementComponent },
+  { path: '', component: SplashComponent },
 ];
 
 @NgModule({

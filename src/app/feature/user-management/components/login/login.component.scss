@@ -1,41 +1,34 @@
-/* login.component.scss */
 .login-container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  background-color: #f0f2f5;
+  background-color: #e0f7fa; /* Match splash page background */
 }
 
 .login-card {
+  padding: 20px;
   width: 400px;
-  padding: 30px;
-  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white; /* Material card style */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
-h2 {
-  margin-bottom: 20px;
-}
-
-.error {
-  color: #dc3545;
+mat-error {
+  color: #d32f2f; /* Red color for errors */
   margin-top: 10px;
-  font-size: 14px;
 }
 
 .links {
-  margin-top: 20px;
-}
+  text-align: center;
+  margin-top: 16px;
 
-.links a {
-  color: #007bff;
-  text-decoration: none;
-  margin: 0 10px;
-}
+  a {
+    color: #0288d1; /* Blue link color */
+    text-decoration: none;
 
-.links a:hover {
-  text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

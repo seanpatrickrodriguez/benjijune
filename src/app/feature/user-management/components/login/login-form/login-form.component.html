@@ -1,21 +1,39 @@
 <!-- login-form.component.html -->
-<form [formGroup]="loginForm" (ngSubmit)="submitForm()" class="login-form">
+<form [formGroup]="form" (ngSubmit)="submitForm()" class="login-form">
   <div class="form-group">
-    <input
-      id="username"
-      placeholder="Username"
-      formControlName="username"
-      required
-    />
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        id="username"
+        placeholder="Username"
+        formControlName="username"
+        required
+      />
+    </mat-form-field>
   </div>
   <div class="form-group">
-    <input
-      id="password"
-      type="password"
-      placeholder="Password"
-      formControlName="password"
-      required
-    />
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        id="password"
+        [type]="showPassword ? 'text' : 'password'"
+        placeholder="Password"
+        formControlName="password"
+        required
+      />
+    </mat-form-field>
+    <mat-icon class="toggle-password" (mousedown)="togglePassword()">{{
+      showPassword ? 'visibility_off' : 'visibility'
+    }}</mat-icon>
   </div>
-  <button type="submit" [disabled]="loginForm.invalid">Login</button>
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="form.invalid"
+  >
+    Login
+  </button>
 </form>

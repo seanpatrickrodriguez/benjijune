@@ -1,15 +1,13 @@
-<!-- login.component.html -->
 <div class="login-container">
-  <div class="login-card">
-    <h2>Login</h2>
+  <mat-card class="login-card">
     <!-- Login form component with event binding -->
     <app-login-form (login)="onLogin($event)"></app-login-form>
     @if (errorMessage()) {
-      <div class="error">{{ errorMessage() }}</div>
+      <mat-error class="error">{{ errorMessage() }}</mat-error>
     }
+    <br>
     <div class="links">
-      <a routerLink="/forgot-password">Forgot Password?</a>
-      <a routerLink="/register">Register</a>
+      <a routerLink="/forgot-password">Recover Account</a>
     </div>
-  </div>
+  </mat-card>
 </div>

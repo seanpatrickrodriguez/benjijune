@@ -1,0 +1,44 @@
+@import 'src/styles.scss';
+
+
+.splash-container {
+  @extend .container; // Use the global container class
+  background-color: $background-color; // Use global color variable
+}
+
+.splash-content {
+  text-align: center;
+  margin-right: 40px;
+  color: $secondary-color; // Use global color variable
+}
+
+.splash-title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.splash-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 16px;
+  color: $primary-color; // Use global color variable
+}
+
+.splash-description {
+  font-size: 1.1rem;
+  max-width: 350px;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 1px;
+  height: 250px;
+  background-color: lighten($primary-color, 30%);
+  margin: 0 50px 0 0;
+}
+
+.login-container {
+  max-width: 320px;
+  width: 100%;
+}
