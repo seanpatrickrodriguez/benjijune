@@ -1,6 +1,5 @@
 @import 'src/styles.scss';
 
-
 .splash-container {
   @extend .container; // Use the global container class
   background-color: $background-color; // Use global color variable
@@ -12,10 +11,14 @@
   color: $secondary-color; // Use global color variable
 }
 
+.splash-intro-title {
+  margin: 0 0 -0.5em 0;
+}
+
 .splash-title {
   font-size: 3.5rem;
   font-weight: 400;
-  margin-bottom: 8px;
+  margin-bottom: .5em;
 }
 
 .splash-subtitle {
@@ -32,9 +35,7 @@
 }
 
 .divider {
-  width: 1px;
   height: 250px;
-  background-color: lighten($primary-color, 30%);
   margin: 0 50px 0 0;
 }
 

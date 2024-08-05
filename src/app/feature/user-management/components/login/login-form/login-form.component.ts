@@ -13,8 +13,10 @@ export class LoginFormComponent {
   showPassword = false;
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      username: ['newuser@example.com', Validators.required],
-      password: ['@Abc1234', Validators.required],
+      //newuser@example.com
+      //@Abc1234
+      username: ['', Validators.required],
+      password: ['', Validators.required],
     });
   }
 

@@ -12,16 +12,21 @@ import { signal } from '@angular/core';
 export class LoginComponent {
   errorMessage = signal<string | null>(null);
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+  ) {}
 
   onLogin(credentials: { username: string; password: string }) {
-    this.authService.login(credentials.username, credentials.password).subscribe({
-      next: () => {
-        this.router.navigate(['/dashboard']);
-        this.errorMessage.set(null); // Clear error message on success
-      },
-      error: (err) => this.errorMessage.set(err.message),
-      complete: () => console.log('Login process completed.')
-    });
+    this.authService
+      .login(credentials.username, credentials.password)
+      .subscribe({
+        next: () => {
+          this.router.navigate(['/dashboard']);
+          this.errorMessage.set(null); // Clear error message on success
+        },
+        error: (err) => this.errorMessage.set(err.message),
+        complete: () => console.log('Login process completed.'),
+      });
   }
 }

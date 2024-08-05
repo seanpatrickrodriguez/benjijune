@@ -3,8 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-splash',
   templateUrl: './splash.component.html',
-  styleUrl: './splash.component.scss'
+  styleUrl: './splash.component.scss',
 })
-export class SplashComponent {
-
-}
+export class SplashComponent {}
