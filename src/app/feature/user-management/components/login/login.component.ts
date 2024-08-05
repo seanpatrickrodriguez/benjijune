@@ -1,14 +1,8 @@
-// src/app/feature/user-management/login/login.component.ts
+// login.component.ts
 import { Component } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  ValidationErrors,
-  Validators,
-} from '@angular/forms';
-import { catchError, of, tap } from 'rxjs';
 import { AuthService } from 'src/app/core/services/auth.service';
-import { ERRORS } from 'src/app/shared/constants';
+import { Router } from '@angular/router';
+import { signal } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -16,64 +10,18 @@ import { ERRORS } from 'src/app/shared/constants';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  loginForm: FormGroup;
-  isLoading = false;
-  ERRORS = ERRORS;
-  constructor(
-    private fb: FormBuilder,
-    private authService: AuthService,
-  ) {
-    this.loginForm = this.fb.group({
-      email: ['newuser@example.com', [Validators.required, Validators.email]],
-      password: ['@Abc1234', [Validators.required]],
-    });
-  }
+  errorMessage = signal<string | null>(null);
 
-  onSubmit() {
-    if (this.loginForm.valid) {
-      this.isLoading = true;
-      const { email, password } = this.loginForm.value;
-      this.authService
-        .signIn(email, password)
-        .pipe(
-          tap(() => {
-            this.isLoading = false;
-            // Handle successful login
-          }),
-          catchError((error) => {
-            this.isLoading = false;
-            this.setFormErrors(error);
-            return of(null); // Handle the error appropriately
-          }),
-        )
-        .subscribe();
-    }
-  }
+  constructor(private authService: AuthService, private router: Router) {}
 
-  getFormErrors(): string[] {
-    const errors: string[] = [];
-    Object.keys(this.loginForm.controls).forEach((key) => {
-      const control = this.loginForm.get(key);
-      if (!control) return;
-      const controlErrors: ValidationErrors | null = errors;
-      if (controlErrors) {
-        Object.keys(controlErrors).forEach((keyError) => {
-          errors.push(controlErrors[keyError]);
-        });
-      }
-    });
-    const formErrors = this.loginForm.errors;
-    if (formErrors) {
-      Object.keys(formErrors).forEach((keyError) => {
-        errors.push(formErrors[keyError]);
-      });
-    }
-    return errors;
-  }
-
-  setFormErrors(error: any) {
-    this.loginForm.setErrors({
-      serverError: ERRORS[error.code],
+  onLogin(credentials: { username: string; password: string }) {
+    this.authService.login(credentials.username, credentials.password).subscribe({
+      next: () => {
+        this.router.navigate(['/dashboard']);
+        this.errorMessage.set(null); // Clear error message on success
+      },
+      error: (err) => this.errorMessage.set(err.message),
+      complete: () => console.log('Login process completed.')
     });
   }
 }

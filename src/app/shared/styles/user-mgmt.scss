@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.recovery-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  button {
+    flex: 1;
+    margin: 0 4px;
+  }
+}
+
+.router-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

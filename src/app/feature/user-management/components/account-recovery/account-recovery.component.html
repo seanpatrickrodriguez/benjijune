@@ -1,1 +1,18 @@
-<p>account-recovery works!</p>
+<div class="container">
+  <mat-card>
+    <mat-card-title>Account Recovery</mat-card-title>
+    <mat-card-content>
+      <div class="recovery-options">
+        <button mat-button routerLink="send-reset-password-email">
+          Reset Password
+        </button>
+        <button mat-button routerLink="recover-email">
+          Recover Email
+        </button>
+      </div>
+      <div class="router-container">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

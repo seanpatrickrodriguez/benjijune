@@ -31,8 +31,12 @@ export class AuthService {
     return from(signInWithEmailAndPassword(this.auth, email, password)).pipe(
       tap(() => {
         this.router.navigate(['/home']);
-      })
+      }),
     );
+  }
+
+  login(a: string, b: string): Observable<void> {
+    return of()
   }
 
   logOut(): Observable<void> {
@@ -54,7 +58,16 @@ export class AuthService {
     return from(sendPasswordResetEmail(this.auth, email)).pipe(
       catchError((error) => {
         console.error('Password reset error:', error);
-        return of(); // Handle error appropriately
+        throw error;
+      }),
+    );
+  }
+
+  sendVerificationEmail(user: User): Observable<void> {
+    return from(sendEmailVerification(user)).pipe(
+      catchError((error) => {
+        console.error('Email verification error:', error);
+        throw error;
       }),
     );
   }

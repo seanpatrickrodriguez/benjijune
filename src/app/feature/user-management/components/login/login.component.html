@@ -1,45 +1,15 @@
-<!-- src/app/feature/user-management/login/login.component.html -->
-<div class="container">
-  <mat-card>
-    <mat-card-title>Login</mat-card-title
-    ><mat-card-content>
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <mat-form-field appearance="fill">
-          <mat-label>Email</mat-label>
-          <input matInput formControlName="email" type="email" required />
-          @if (loginForm.get('email')?.hasError('required')) {
-            <mat-error>{{ ERRORS['required'] }}</mat-error>
-          }
-          @if (loginForm.get('email')?.hasError('email')) {
-            <mat-error>{{ ERRORS['email'] }}</mat-error>
-          }
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Password</mat-label>
-          <input matInput formControlName="password" type="password" required />
-          @if (loginForm.get('password')?.hasError('required')) {
-            <mat-error>{{ ERRORS['required'] }}</mat-error>
-          }
-        </mat-form-field>
-        @for (error of getFormErrors(); track error) {
-          <mat-error> {{ error }}</mat-error>
-        }
-        <div class="actions">
-          <button
-            mat-raised-button
-            color="primary"
-            type="submit"
-            [disabled]="isLoading"
-          >
-            @if (isLoading) {
-              <mat-spinner diameter="20"></mat-spinner>
-            } @else {
-              <span>Login</span>
-            }
-          </button>
-        </div>
-      </form>
-      <span routerLink="account-recovery">I forgot my username or password</span>
-    </mat-card-content>
-  </mat-card>
+<!-- login.component.html -->
+<div class="login-container">
+  <div class="login-card">
+    <h2>Login</h2>
+    <!-- Login form component with event binding -->
+    <app-login-form (login)="onLogin($event)"></app-login-form>
+    @if (errorMessage()) {
+      <div class="error">{{ errorMessage() }}</div>
+    }
+    <div class="links">
+      <a routerLink="/forgot-password">Forgot Password?</a>
+      <a routerLink="/register">Register</a>
+    </div>
+  </div>
 </div>

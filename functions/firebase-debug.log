@@ -94,3 +94,1109 @@
 
 Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
  
+[debug] [2024-07-31T13:32:39.635Z] Received signal SIGHUP 1
+[debug] [2024-08-04T18:32:14.633Z] ----------------------------------------------------------------------
+[debug] [2024-08-04T18:32:14.636Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\sean5\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2024-08-04T18:32:14.637Z] CLI Version:   13.10.2
+[debug] [2024-08-04T18:32:14.637Z] Platform:      win32
+[debug] [2024-08-04T18:32:14.637Z] Node Version:  v22.2.0
+[debug] [2024-08-04T18:32:14.637Z] Time:          Sun Aug 04 2024 13:32:14 GMT-0500 (Central Daylight Time)
+[debug] [2024-08-04T18:32:14.637Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-04T18:32:14.641Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-08-04T18:32:14.776Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] Failed to authenticate, have you run firebase login?
+[warn] !  emulators: You are not currently authenticated so some features may not work correctly. Please run firebase login to authenticate the CLI. 
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-08-04T18:32:14.801Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-08-04T18:32:14.802Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project benji-5fd54. This may result in unexpected behavior. 
+[debug] [2024-08-04T18:32:14.806Z] [hub] writing locator at C:\Users\sean5\AppData\Local\Temp\hub-benji-5fd54.json
+[debug] [2024-08-04T18:32:14.823Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-08-04T18:32:14.823Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-08-04T18:32:14.824Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[warn] !  functions: You are not signed in to the Firebase CLI. If you have authorized this machine using gcloud application-default credentials those may be discovered and used to access production services. {"metadata":{"emulator":{"name":"functions"},"message":"You are not signed in to the Firebase CLI. If you have authorized this machine using gcloud application-default credentials those may be discovered and used to access production services."}}
+[debug] [2024-08-04T18:32:14.826Z] > refreshing access token with scopes: []
+[debug] [2024-08-04T18:32:14.828Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-08-04T18:32:14.828Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-04T18:32:14.906Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-08-04T18:32:14.907Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-08-04T18:32:14.919Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-08-04T18:32:14.919Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-04T18:32:14.919Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/benji-5fd54/adminSdkConfig [none]
+[debug] [2024-08-04T18:32:15.051Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/benji-5fd54/adminSdkConfig 401
+[debug] [2024-08-04T18:32:15.051Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/benji-5fd54/adminSdkConfig {"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"method":"google.firebase.service.v1beta1.FirebaseProjectService.GetAdminSdkConfig","service":"firebase.googleapis.com"}}]}}
+[debug] [2024-08-04T18:32:15.052Z] Failed to get Admin SDK config for benji-5fd54, falling back to cache Failed to get Admin SDK for Firebase project benji-5fd54. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project benji-5fd54. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"method":"google.firebase.service.v1beta1.FirebaseProjectService.GetAdminSdkConfig","service":"firebase.googleapis.com"}}]}},"response":{"statusCode":401}},"exit":1,"message":"HTTP Error: 401, Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":401},"status":500}
+[warn] !  functions: Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect. {"metadata":{"emulator":{"name":"functions"},"message":"Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect."}}
+[debug] [2024-08-04T18:32:15.062Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-08-04T18:32:15.062Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-08-04T18:32:15.063Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\sean5\\.cache\\firebase\\emulators\\ui-v1.12.1\\server\\server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\sean5\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.12.1\\\\server\\\\server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-08-04T18:32:15.244Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-08-04T18:32:15.245Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\sean5\Desktop\BENJI\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\sean5\\Desktop\\BENJI\\functions\" for Cloud Functions..."}}
+[debug] [2024-08-04T18:32:15.281Z] Validating nodejs source
+[debug] [2024-08-04T18:32:16.580Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:32:16.580Z] Building nodejs source
+[debug] [2024-08-04T18:32:16.581Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:32:16.583Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:32:16.592Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8533
+
+[debug] [2024-08-04T18:32:17.081Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-08-04T18:32:17.330Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T18:32:17.331Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T18:32:18.338Z] Validating nodejs source
+[debug] [2024-08-04T18:32:19.587Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:32:19.588Z] Building nodejs source
+[debug] [2024-08-04T18:32:19.588Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:32:19.589Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:32:19.598Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8452
+
+[debug] [2024-08-04T18:32:19.910Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T18:41:07.802Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T18:41:08.815Z] Validating nodejs source
+[debug] [2024-08-04T18:41:09.889Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:41:09.889Z] Building nodejs source
+[debug] [2024-08-04T18:41:09.890Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:41:09.891Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:41:09.898Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8586
+
+[debug] [2024-08-04T18:41:10.105Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-08-04T18:41:10.804Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T18:41:10.806Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T18:41:11.815Z] Validating nodejs source
+[debug] [2024-08-04T18:41:12.691Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:41:12.691Z] Building nodejs source
+[debug] [2024-08-04T18:41:12.691Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:41:12.692Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:41:12.698Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8005
+
+[debug] [2024-08-04T18:41:12.914Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T18:41:22.887Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T18:41:23.902Z] Validating nodejs source
+[debug] [2024-08-04T18:41:24.822Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:41:24.822Z] Building nodejs source
+[debug] [2024-08-04T18:41:24.822Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:41:24.823Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:41:24.830Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8759
+
+[debug] [2024-08-04T18:41:25.047Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-08-04T18:41:25.686Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T18:41:25.687Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T18:41:26.698Z] Validating nodejs source
+[debug] [2024-08-04T18:41:27.520Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:41:27.520Z] Building nodejs source
+[debug] [2024-08-04T18:41:27.520Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:41:27.521Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:41:27.527Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8466
+
+[debug] [2024-08-04T18:41:27.723Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T18:42:02.796Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T18:42:03.147Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T18:42:03.148Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T18:42:04.157Z] Validating nodejs source
+[debug] [2024-08-04T18:42:05.037Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:42:05.038Z] Building nodejs source
+[debug] [2024-08-04T18:42:05.038Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:42:05.039Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:42:05.046Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8247
+
+[debug] [2024-08-04T18:42:05.271Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T18:42:37.484Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T18:42:37.835Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T18:42:37.837Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T18:42:38.853Z] Validating nodejs source
+[debug] [2024-08-04T18:42:39.711Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:42:39.712Z] Building nodejs source
+[debug] [2024-08-04T18:42:39.712Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:42:39.712Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:42:39.719Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8565
+
+[debug] [2024-08-04T18:42:39.909Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T18:53:20.235Z] File C:\Users\sean5\Desktop\BENJI\functions\package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\package.json changed, reloading triggers"}}
+[debug] [2024-08-04T18:53:20.398Z] File C:\Users\sean5\Desktop\BENJI\functions\package-lock.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\package-lock.json changed, reloading triggers"}}
+[debug] [2024-08-04T18:53:21.413Z] Validating nodejs source
+[debug] [2024-08-04T18:53:22.394Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:53:22.394Z] Building nodejs source
+[debug] [2024-08-04T18:53:22.395Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:53:22.396Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:53:22.402Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8506
+
+[debug] [2024-08-04T18:53:22.589Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T18:53:28.568Z] File C:\Users\sean5\Desktop\BENJI\functions\package-lock.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\package-lock.json changed, reloading triggers"}}
+[debug] [2024-08-04T18:53:29.570Z] Validating nodejs source
+[debug] [2024-08-04T18:53:30.433Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:53:30.433Z] Building nodejs source
+[debug] [2024-08-04T18:53:30.433Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:53:30.434Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:53:30.440Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8819
+
+[debug] [2024-08-04T18:53:30.625Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T18:55:04.770Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T18:55:05.780Z] Validating nodejs source
+[debug] [2024-08-04T18:55:06.683Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:55:06.683Z] Building nodejs source
+[debug] [2024-08-04T18:55:06.683Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:55:06.684Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:55:06.690Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8331
+
+[debug] [2024-08-04T18:55:06.888Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-08-04T18:55:07.413Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T18:55:07.415Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T18:55:08.429Z] Validating nodejs source
+[debug] [2024-08-04T18:55:09.284Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:55:09.284Z] Building nodejs source
+[debug] [2024-08-04T18:55:09.284Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:55:09.284Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:55:09.290Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8598
+
+[debug] [2024-08-04T18:55:09.490Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T18:57:07.772Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T18:57:08.776Z] Validating nodejs source
+[debug] [2024-08-04T18:57:09.652Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:57:09.652Z] Building nodejs source
+[debug] [2024-08-04T18:57:09.652Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:57:09.653Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:57:09.660Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8581
+
+[debug] [2024-08-04T18:57:09.864Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T18:57:49.154Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T18:57:50.158Z] Validating nodejs source
+[debug] [2024-08-04T18:57:51.079Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:57:51.079Z] Building nodejs source
+[debug] [2024-08-04T18:57:51.079Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:57:51.080Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:57:51.087Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8995
+
+[debug] [2024-08-04T18:57:51.295Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-08-04T18:57:51.846Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T18:57:51.848Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T18:57:52.853Z] Validating nodejs source
+[debug] [2024-08-04T18:57:53.724Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:57:53.725Z] Building nodejs source
+[debug] [2024-08-04T18:57:53.725Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:57:53.726Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:57:53.732Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8239
+
+[debug] [2024-08-04T18:57:54.337Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T18:58:11.443Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T18:58:11.801Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T18:58:11.801Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T18:58:12.805Z] Validating nodejs source
+[debug] [2024-08-04T18:58:13.750Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:58:13.750Z] Building nodejs source
+[debug] [2024-08-04T18:58:13.750Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:58:13.751Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:58:13.758Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8613
+
+[debug] [2024-08-04T18:58:14.216Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T18:59:16.770Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T18:59:17.781Z] Validating nodejs source
+[debug] [2024-08-04T18:59:18.788Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:59:18.788Z] Building nodejs source
+[debug] [2024-08-04T18:59:18.788Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:59:18.789Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:59:18.796Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8056
+
+[debug] [2024-08-04T18:59:19.301Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-08-04T18:59:20.769Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T18:59:20.771Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T18:59:21.771Z] Validating nodejs source
+[debug] [2024-08-04T18:59:22.622Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:59:22.622Z] Building nodejs source
+[debug] [2024-08-04T18:59:22.622Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:59:22.623Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:59:22.628Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8054
+
+[debug] [2024-08-04T18:59:23.104Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T18:59:43.751Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T18:59:44.260Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T18:59:44.262Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T18:59:45.275Z] Validating nodejs source
+[debug] [2024-08-04T18:59:46.158Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T18:59:46.158Z] Building nodejs source
+[debug] [2024-08-04T18:59:46.158Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T18:59:46.159Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T18:59:46.166Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8998
+
+[debug] [2024-08-04T18:59:46.377Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T19:00:00.579Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T19:00:00.943Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T19:00:00.945Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T19:00:01.950Z] Validating nodejs source
+[debug] [2024-08-04T19:00:02.827Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T19:00:02.827Z] Building nodejs source
+[debug] [2024-08-04T19:00:02.827Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T19:00:02.828Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T19:00:02.834Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8798
+
+[debug] [2024-08-04T19:00:03.036Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T19:00:10.081Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T19:00:10.441Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T19:00:10.443Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T19:00:11.457Z] Validating nodejs source
+[debug] [2024-08-04T19:00:12.340Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T19:00:12.340Z] Building nodejs source
+[debug] [2024-08-04T19:00:12.341Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T19:00:12.341Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T19:00:12.347Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8514
+
+[debug] [2024-08-04T19:00:12.546Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T19:00:26.893Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T19:00:27.273Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T19:00:27.275Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T19:00:28.280Z] Validating nodejs source
+[debug] [2024-08-04T19:00:29.193Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T19:00:29.194Z] Building nodejs source
+[debug] [2024-08-04T19:00:29.194Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T19:00:29.195Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T19:00:29.205Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8261
+
+[error] C:\Users\sean5\Desktop\BENJI\functions\lib\index.js:21
+const async;
+      ^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (node:internal/modules/cjs/loader:1350:18)
+    at Module._compile (node:internal/modules/cjs/loader:1379:20)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1518:10)
+    at Module.load (node:internal/modules/cjs/loader:1249:32)
+    at Module._load (node:internal/modules/cjs/loader:1065:12)
+    at Module.require (node:internal/modules/cjs/loader:1271:19)
+    at require (node:internal/modules/helpers:123:16)
+    at loadModule (C:\Users\sean5\Desktop\BENJI\functions\node_modules\firebase-functions\lib\runtime\loader.js:40:16)
+    at loadStack (C:\Users\sean5\Desktop\BENJI\functions\node_modules\firebase-functions\lib\runtime\loader.js:93:23)
+    at C:\Users\sean5\Desktop\BENJI\functions\node_modules\firebase-functions\lib\bin\firebase-functions.js:56:56
+
+[debug] [2024-08-04T19:00:29.441Z] Got response code 400; body Failed to generate manifest from function source: SyntaxError: Missing initializer in const declaration
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Functions codebase could not be analyzed successfully. It may have a syntax or runtime error"}}
+[debug] [2024-08-04T19:21:11.358Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T19:21:11.718Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2024-08-04T19:21:11.719Z] File C:\Users\sean5\Desktop\BENJI\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2024-08-04T19:21:12.728Z] Validating nodejs source
+[debug] [2024-08-04T19:21:13.664Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T19:21:13.664Z] Building nodejs source
+[debug] [2024-08-04T19:21:13.664Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T19:21:13.665Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T19:21:13.671Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8087
+
+[debug] [2024-08-04T19:21:13.870Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-08-04T23:54:37.124Z] File C:\Users\sean5\Desktop\BENJI\functions\src\index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\sean5\\Desktop\\BENJI\\functions\\src\\index.ts changed, reloading triggers"}}
+[debug] [2024-08-04T23:54:38.124Z] Validating nodejs source
+[debug] [2024-08-04T23:54:39.214Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.3.0",
+    "firebase-functions": "^5.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-04T23:54:39.214Z] Building nodejs source
+[debug] [2024-08-04T23:54:39.214Z] Failed to find version of module node: reached end of search path C:\Users\sean5\Desktop\BENJI\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-04T23:54:39.216Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-04T23:54:39.223Z] Found firebase-functions binary at 'C:\Users\sean5\Desktop\BENJI\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8231
+
+[debug] [2024-08-04T23:54:39.485Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}

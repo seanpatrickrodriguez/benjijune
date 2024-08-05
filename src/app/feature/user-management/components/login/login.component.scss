@@ -1,23 +1,41 @@
-/* src/app/feature/user-management/login/login.component.scss */
-.container {
+/* login.component.scss */
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #f0f2f5;
 }
 
-mat-card {
-  width: 100%;
-  max-width: 400px;
+.login-card {
+  width: 400px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-mat-card-content {
-  display: flex;
-  flex-direction: column;
+h2 {
+  margin-bottom: 20px;
 }
 
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 16px;
+.error {
+  color: #dc3545;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.links a:hover {
+  text-decoration: underline;
 }

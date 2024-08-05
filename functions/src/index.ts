@@ -17,3 +17,30 @@
 //   logger.info("Hello logs!", {structuredData: true});
 //   response.send("Hello from Firebase!");
 // });
+
+import * as admin from 'firebase-admin';
+import * as functions from 'firebase-functions';
+export type CallableContext = functions.https.CallableContext;
+
+admin.initializeApp();
+
+async function createUser(
+  email: string,
+  password: string,
+  displayName: string,
+) {
+  return admin
+    .auth()
+    .createUser({
+      email: email,
+      password: password,
+      displayName: displayName,
+    })
+    .then((userRecord) => {
+      console.log('Successfully created new user:', userRecord.uid);
+      return userRecord;
+    })
+    .catch((error) => {
+      console.error('Error creating new user:', error);
+    });
+}
