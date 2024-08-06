@@ -1,1 +1,80 @@
-@import 'src/app/shared/styles/user-mgmt.scss';
+@import '../splash/splash.component.scss';
+
+.container {
+  @extend .splash-container;
+  height: 100vh;
+}
+
+.description {
+  @extend .description;
+  text-align: left;
+  align-self: center;
+  padding: 1em;
+}
+
+.recovery-options-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  text-align: left;
+  align-self: center;
+}
+.recovery-options-list {
+  margin: 0 2em;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  padding:0;
+  margin:0;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: min-content;
+  margin: auto;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.5em;
+  top: 0.75em;
+}
+
+.form-group {
+  position: relative;
+}
+
+.mat-card {
+  background-color: #2d405e; // Softer off-white
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Slightly softer shadow
+  padding: 20px;
+}
+
+.option-container {
+  padding: 1em;
+}
+
+.links {
+  text-align: center;
+  margin-top: 16px;
+
+  a {
+    color: #0288d1; /* Blue link color */
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -27,7 +27,7 @@ export class AuthService {
     this.authStateGuard();
   }
 
-  signIn(email: string, password: string): Observable<UserCredential> {
+  login(email: string, password: string): Observable<UserCredential> {
     return from(signInWithEmailAndPassword(this.auth, email, password)).pipe(
       tap(() => {
         this.router.navigate(['/home']);
@@ -35,9 +35,6 @@ export class AuthService {
     );
   }
 
-  login(a: string, b: string): Observable<void> {
-    return of()
-  }
 
   logOut(): Observable<void> {
     return from(signOut(this.auth));

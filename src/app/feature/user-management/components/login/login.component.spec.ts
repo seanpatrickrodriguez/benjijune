@@ -13,6 +13,9 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { provideRouter } from '@angular/router';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { MatIconModule } from '@angular/material/icon';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -20,17 +23,20 @@ describe('LoginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LoginComponent],
+      declarations: [LoginComponent, LoginFormComponent]
+      ,
       imports: [
         ReactiveFormsModule,
         MatCardModule,
         MatFormFieldModule,
         MatInputModule,
+        MatIconModule,
         MatButtonModule,
         MatProgressSpinnerModule,
       ],
       providers: [
         AuthService,
+        provideRouter([]),
         provideAnimationsAsync(),
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
         provideAuth(() => getAuth()),

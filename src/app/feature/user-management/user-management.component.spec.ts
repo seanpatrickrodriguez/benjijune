@@ -18,7 +18,7 @@ describe('UserManagementComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [
         UserManagementComponent,
-        LoginComponent
+        LoginComponent,
       ],
       imports: [
         ReactiveFormsModule,

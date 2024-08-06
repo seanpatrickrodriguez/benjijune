@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100vh;
+
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
 
 // styles.scss
 
@@ -22,7 +29,12 @@ body {
 }
 
 // Headings
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $secondary-color;
   font-weight: 400;
 }
@@ -38,9 +50,9 @@ a {
 }
 
 // Buttons
-button, .mat-raised-button {
+button,
+.mat-raised-button {
   font-size: 1rem;
-
 }
 
 // Card
@@ -71,10 +83,10 @@ mat-error {
 }
 
 // Container Layouts
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 20px;
-}
+// .container {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   // height: 100vh;
+//   padding: 20px;
+// }

@@ -11,10 +11,11 @@ export class LoginFormComponent {
   @Output() login = new EventEmitter<{ username: string; password: string }>();
   form: FormGroup;
   showPassword = false;
+
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      //newuser@example.com
-      //@Abc1234
+      // newuser@example.comp
+      // @Abc1234
       username: ['', Validators.required],
       password: ['', Validators.required],
     });

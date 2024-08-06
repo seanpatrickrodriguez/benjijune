@@ -1,18 +1,108 @@
 <div class="container">
-  <mat-card>
-    <mat-card-title>Account Recovery</mat-card-title>
-    <mat-card-content>
-      <div class="recovery-options">
-        <button mat-button routerLink="send-reset-password-email">
-          Reset Password
-        </button>
-        <button mat-button routerLink="recover-email">
-          Recover Email
-        </button>
+  <div class="splash-content">
+    <div class="about-container">
+      <h2 class="title">Account Recovery</h2>
+      <p class="description">
+        We can help you recover your account. Follow the steps below. If further
+        assistance is required, please contact support &#64;
+        pwell-support&#64;aapcho.org
+      </p>
+      <div class="recovery-options-container">
+        <div>
+          <strong>Step 1:</strong> Choose one of the identity verification
+          options:
+        </div>
+        <ul class="recovery-options-list">
+          <li>email</li>
+          <li>phone number</li>
+          <li>name and birthdate</li>
+        </ul>
+        <div><strong>Step 2:</strong> Fill out the required form fields.</div>
+        <div><strong>Step 3:</strong> Click the submit button.</div>
+        <div><strong>Step 4:</strong> Follow the further instructions.</div>
       </div>
-      <div class="router-container">
-        <router-outlet></router-outlet>
-      </div>
-    </mat-card-content>
-  </mat-card>
+    </div>
+    <div class="divider"></div>
+    <div class="login-container">
+      <form [formGroup]="form" (ngSubmit)="submitForm()" class="login-form">
+        To recover your account, please enter your:
+        <div class="option-container">
+          <div class="form-group">
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input
+                matInput
+                id="username"
+                placeholder="Username"
+                formControlName="username"
+                required
+              />
+            </mat-form-field>
+          </div>
+        </div>
+        <!--  -->
+        <div class="option-container">
+          OR
+          <div class="form-group">
+            <mat-form-field appearance="outline">
+              <mat-label>Phone number</mat-label>
+              <input
+                matInput
+                id="username"
+                placeholder="Username"
+                formControlName="username"
+                required
+              />
+            </mat-form-field>
+          </div>
+        </div>
+        <!--  -->
+        <div class="option-container">
+          OR
+          <div class="form-group">
+            <mat-form-field appearance="outline">
+              <mat-label>First name</mat-label>
+              <input
+                matInput
+                id="username"
+                placeholder="Username"
+                formControlName="username"
+                required
+              />
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field appearance="outline">
+              <mat-label>Last name</mat-label>
+              <input
+                matInput
+                id="username"
+                placeholder="Username"
+                formControlName="username"
+                required
+              />
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field appearance="outline">
+              <mat-label>Birthdate</mat-label>
+              <input
+                matInput
+                id="username"
+                placeholder="Username"
+                formControlName="username"
+                required
+              />
+            </mat-form-field>
+          </div>
+        </div>
+        <!--  -->
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+        <br />
+        <div class="links">
+          <a [routerLink]="['user']">Back to login</a>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

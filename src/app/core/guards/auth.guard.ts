@@ -8,12 +8,12 @@ export const authGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
   const authService = inject(AuthService);
 
-  console.log('Guest Guard');
+  console.log('Auth Guard');
 
   return from(authService.getAuthState()).pipe(
     tap(authState => {
       if (!authState) {
-        router.navigate(['/user-management']);
+        router.navigate(['/user']);
       }
     }),
     map(authState => authState), // Allow access if the user is authenticated

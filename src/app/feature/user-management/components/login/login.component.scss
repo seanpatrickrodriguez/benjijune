@@ -2,16 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #e0f7fa; /* Match splash page background */
 }
 
 .login-card {
   padding: 20px;
-  width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: white; /* Material card style */
-  border-radius: 8px;
 }
 
 mat-error {

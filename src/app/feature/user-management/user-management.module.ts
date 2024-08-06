@@ -20,6 +20,9 @@ import { SendPasswordResetEmailComponent } from './components/send-password-rese
 import { SetNewPasswordComponent } from './components/set-new-password/set-new-password.component';
 import { LoginFormComponent } from './components/login/login-form/login-form.component';
 import { SplashComponent } from './components/splash/splash.component';
+import { RouterModule } from '@angular/router';
+import { RecoverPersonComponent } from './components/recover-person/recover-person.component';
+import { RecoverPhoneComponent } from './components/recover-phone/recover-phone.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,8 @@ import { SplashComponent } from './components/splash/splash.component';
     SetNewPasswordComponent,
     SplashComponent,
     LoginFormComponent,
+    RecoverPersonComponent,
+    RecoverPhoneComponent,
   ],
   imports: [
     CommonModule,

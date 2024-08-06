@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { ERRORS } from 'src/app/shared/constants';
@@ -9,19 +9,25 @@ import { ERRORS } from 'src/app/shared/constants';
   styleUrl: './recover-email.component.scss',
 })
 export class RecoverEmailComponent {
-  isLoading = false;
+  @Output() login = new EventEmitter<{ username: string; password: string }>();
   form: FormGroup;
-  ERRORS = ERRORS;
+  showPassword = false;
 
-  constructor(
-    private fb: FormBuilder,
-    private authService: AuthService,
-  ) {
+  constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      email: ['newuser@example.com', [Validators.required, Validators.email]],
-      password: ['@Abc1234', [Validators.required]],
+      // newuser@example.comp
+      // @Abc1234
+      username: ['', Validators.required],
     });
   }
 
-  onSubmit() {}
+  togglePassword(): void {
+    this.showPassword = !this.showPassword;
+  }
+
+  submitForm() {
+    if (this.form.valid) {
+      this.login.emit(this.form.value);
+    }
+  }
 }

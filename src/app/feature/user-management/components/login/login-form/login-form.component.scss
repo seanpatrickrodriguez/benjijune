@@ -3,7 +3,8 @@
 .login-form {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 400px;
+  height: min-content;
   margin: auto;
 }
 
@@ -20,4 +21,11 @@ mat-form-field {
 
 .form-group {
   position: relative;
+}
+
+.mat-card {
+  background-color: #2d405e; // Softer off-white
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Slightly softer shadow
+  padding: 20px;
 }

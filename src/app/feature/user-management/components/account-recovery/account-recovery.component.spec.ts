@@ -12,6 +12,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
+import { provideRouter, RouterModule } from '@angular/router';
 
 describe('AccountRecoveryComponent', () => {
   let component: AccountRecoveryComponent;
@@ -22,6 +23,7 @@ describe('AccountRecoveryComponent', () => {
       declarations: [AccountRecoveryComponent],
       imports: [
         ReactiveFormsModule,
+        RouterModule.forRoot([]),
         MatCardModule,
         MatFormFieldModule,
         MatInputModule,
@@ -30,6 +32,7 @@ describe('AccountRecoveryComponent', () => {
       ],
       providers: [
         AuthService,
+        provideRouter([]),
         provideAnimationsAsync(),
         provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
         provideAuth(() => getAuth()),

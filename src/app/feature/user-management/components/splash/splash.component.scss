@@ -1,45 +1,59 @@
-@import 'src/styles.scss';
+@import 'src/app/shared/styles/user-mgmt.scss';
 
 .splash-container {
-  @extend .container; // Use the global container class
-  background-color: $background-color; // Use global color variable
+  @extend .container;
 }
 
 .splash-content {
+  @extend .content;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 50%;
   text-align: center;
-  margin-right: 40px;
-  color: $secondary-color; // Use global color variable
+  align-self: center;
 }
 
-.splash-intro-title {
-  margin: 0 0 -0.5em 0;
+.title-intro {
+  margin-bottom: -0.5em;
 }
 
-.splash-title {
-  font-size: 3.5rem;
-  font-weight: 400;
-  margin-bottom: .5em;
+.title {
+  font-weight: 1000;
 }
 
-.splash-subtitle {
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin-bottom: 16px;
-  color: $primary-color; // Use global color variable
-}
-
-.splash-description {
-  font-size: 1.1rem;
-  max-width: 350px;
-  line-height: 1.6;
-}
-
-.divider {
-  height: 250px;
-  margin: 0 50px 0 0;
+.description {
+  width: 400px;
+  align-self: center;
 }
 
 .login-container {
-  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 50%;
+  justify-content: center;
+  height: 100%;
+  background-color: #fbf8ff;
+}
+.notifications {
+}
+
+.notifications-title-bar {
   width: 100%;
+  background-color: rgb(250, 250, 250) !important;
+}
+
+.divider {
+  display: flex;
+  width: 2px;
+  height: 100%;
+  background-color: black;
 }

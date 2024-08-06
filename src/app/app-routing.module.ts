@@ -12,7 +12,7 @@ const routes: Routes = [
       .then(m => m.HomeModule)
   },
   {
-    path: 'user-management',
+    path: 'user',
     canActivate: [guestGuard],
     loadChildren: () => import('./feature/user-management/user-management.module')
       .then(m => m.UserManagementModule)
