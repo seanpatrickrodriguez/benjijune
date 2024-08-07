@@ -5,32 +5,48 @@
   height: 100vh;
 }
 
+.splash-content {
+  @extend .splash-content;
+}
 .description {
   @extend .description;
   text-align: left;
   align-self: center;
-  padding: 1em;
+}
+
+.about-container {
+  @extend .about-container;
+  width: 50%;
 }
 
 .recovery-options-container {
   display: flex;
   flex-direction: column;
-  width: 400px;
   text-align: left;
   align-self: center;
+  font-size: 1.2em;
+  font-weight: 300;
 }
 .recovery-options-list {
-  margin: 0 2em;
+  margin-left: 2em;
+}
+
+.recovery-step {
+  margin-bottom: 1em;
+
+  strong {
+    margin-right: 0.5em;
+  }
 }
 
 .login-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction:column;
-  padding:0;
-  margin:0;
+  flex-direction: column;
+
 }
+
 .login-form {
   display: flex;
   flex-direction: column;
@@ -41,7 +57,6 @@
 
 mat-form-field {
   width: 100%;
-  margin-bottom: 16px;
 }
 
 .toggle-password {
@@ -50,24 +65,26 @@ mat-form-field {
   top: 0.75em;
 }
 
+form {
+  // background-color: #ffffff;
+  box-sizing: content-box;
+  padding: 1em;
+}
+
 .form-group {
-  position: relative;
+  
+  background-color: #effdff;
 }
 
 .mat-card {
   background-color: #2d405e; // Softer off-white
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Slightly softer shadow
-  padding: 20px;
-}
-
-.option-container {
-  padding: 1em;
 }
 
 .links {
   text-align: center;
-  margin-top: 16px;
+  margin-top: 1em;
 
   a {
     color: #0288d1; /* Blue link color */
@@ -77,4 +94,11 @@ mat-form-field {
       text-decoration: underline;
     }
   }
+}
+
+.option-container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }

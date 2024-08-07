@@ -15,7 +15,7 @@ const routes: Routes = [
     component: SendPasswordResetEmailComponent,
   },
   { path: 'recover-email', component: RecoverEmailComponent },
-  { path: '', component: SplashComponent },
+  { path: '', redirectTo:'login',pathMatch:'full' },
 ];
 
 @NgModule({

@@ -3,7 +3,10 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, catchError, from, of, tap } from 'rxjs';
 import {
+  ApplicationVerifier,
   Auth,
+  ConfirmationResult,
+  RecaptchaVerifier,
   User,
   UserCredential,
   createUserWithEmailAndPassword,
@@ -11,6 +14,7 @@ import {
   sendEmailVerification,
   sendPasswordResetEmail,
   signInWithEmailAndPassword,
+  signInWithPhoneNumber,
   signOut,
 } from '@angular/fire/auth';
 
@@ -19,6 +23,7 @@ import {
 })
 export class AuthService {
   private authState = new BehaviorSubject<boolean>(false);
+  private recaptchaVerifier!: RecaptchaVerifier;
 
   constructor(
     private router: Router,
@@ -34,7 +39,6 @@ export class AuthService {
       }),
     );
   }
-
 
   logOut(): Observable<void> {
     return from(signOut(this.auth));
@@ -69,10 +73,36 @@ export class AuthService {
     );
   }
 
+  signInWithPhoneNumber(number: { phone: string }) {
+    // : Observable<ConfirmationResult>
+    if (!this.recaptchaVerifier) {
+      this.recaptchaVerifier = new RecaptchaVerifier(this.auth, 'recaptcha', {
+        size: 'visible', // or 'normal' for visible reCAPTCHA
+        callback: (response: string) => {
+          console.log('reCAPTCHA solved:', response);
+          // reCAPTCHA solved, allow signInWithPhoneNumber.
+        },
+      });
+    }
+
+    return from(
+      signInWithPhoneNumber(
+        this.auth,
+        number.phone,
+        this.recaptchaVerifier as ApplicationVerifier,
+      ),
+    ).pipe(
+      catchError((error) => {
+        console.error('Phone sign in error:', error);
+        throw error;
+      }),
+    );
+  }
+
   authStateGuard(): void {
     onAuthStateChanged(this.auth, (user) => {
       this.authState.next(!!user);
-      if (!user) this.router.navigate(['/user-management']);
+      if (!user) this.router.navigate(['/user']);
     });
   }
 

@@ -22,15 +22,21 @@
 }
 
 .title-intro {
-  margin-bottom: -0.5em;
+  font-size: 1.5em;
+  font-weight: 300;
+  font-variant: small-caps;
 }
 
 .title {
   font-weight: 1000;
+  font-size: 5em;
 }
 
 .description {
-  width: 400px;
+  width: 560px;
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1.25em;
   align-self: center;
 }
 

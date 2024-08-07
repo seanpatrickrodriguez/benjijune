@@ -8,65 +8,91 @@
         pwell-support&#64;aapcho.org
       </p>
       <div class="recovery-options-container">
-        <div>
+        <div class="recovery-step">
           <strong>Step 1:</strong> Choose one of the identity verification
           options:
+
+          <ul class="recovery-options-list">
+            <li>email</li>
+            <li>phone number</li>
+            <li>name and birthdate</li>
+          </ul>
         </div>
-        <ul class="recovery-options-list">
-          <li>email</li>
-          <li>phone number</li>
-          <li>name and birthdate</li>
-        </ul>
-        <div><strong>Step 2:</strong> Fill out the required form fields.</div>
-        <div><strong>Step 3:</strong> Click the submit button.</div>
-        <div><strong>Step 4:</strong> Follow the further instructions.</div>
+        <div class="recovery-step">
+          <strong>Step 2:</strong> Fill out the required form fields.
+        </div>
+        <div class="recovery-step">
+          <strong>Step 3:</strong> Click 'Recover'
+        </div>
+        <div class="recovery-step">
+          <strong>Step 4:</strong> Follow any further instructions.
+        </div>
       </div>
     </div>
     <div class="divider"></div>
     <div class="login-container">
-      <form [formGroup]="form" (ngSubmit)="submitForm()" class="login-form">
-        To recover your account, please enter your:
+      <p>To recover your account, please enter your:</p>
+      <form
+        [formGroup]="forms['email']"
+        (ngSubmit)="submitForm()"
+        #email
+        id="email"
+        (click)="selectForm($event)"
+      >
         <div class="option-container">
           <div class="form-group">
+            <br />
             <mat-form-field appearance="outline">
               <mat-label>Email</mat-label>
               <input
                 matInput
-                id="username"
-                placeholder="Username"
-                formControlName="username"
+                placeholder="Email"
+                formControlName="email"
                 required
               />
             </mat-form-field>
           </div>
         </div>
-        <!--  -->
+      </form>
+      <!--  -->
+      <form
+        [formGroup]="forms['phone']"
+        (ngSubmit)="submitForm()"
+        id="phone"
+        (click)="selectForm($event)"
+      >
         <div class="option-container">
-          OR
           <div class="form-group">
+            OR
             <mat-form-field appearance="outline">
               <mat-label>Phone number</mat-label>
               <input
                 matInput
-                id="username"
-                placeholder="Username"
-                formControlName="username"
+                placeholder="Phone"
+                formControlName="phone"
                 required
               />
             </mat-form-field>
           </div>
         </div>
-        <!--  -->
+        <button mat-raised-button color="primary" type="submit">Recover</button>
+      </form>
+      <!--  -->
+      <form
+        [formGroup]="forms['person']"
+        (ngSubmit)="submitForm()"
+        id="person"
+        (click)="selectForm($event)"
+      >
         <div class="option-container">
-          OR
           <div class="form-group">
+            OR
             <mat-form-field appearance="outline">
               <mat-label>First name</mat-label>
               <input
                 matInput
-                id="username"
-                placeholder="Username"
-                formControlName="username"
+                placeholder="First"
+                formControlName="first"
                 required
               />
             </mat-form-field>
@@ -76,9 +102,8 @@
               <mat-label>Last name</mat-label>
               <input
                 matInput
-                id="username"
-                placeholder="Username"
-                formControlName="username"
+                placeholder="Last"
+                formControlName="last"
                 required
               />
             </mat-form-field>
@@ -88,19 +113,21 @@
               <mat-label>Birthdate</mat-label>
               <input
                 matInput
-                id="username"
-                placeholder="Username"
-                formControlName="username"
+                placeholder="Birthdate"
+                formControlName="birthdate"
                 required
               />
             </mat-form-field>
           </div>
+          <button mat-raised-button color="primary" (click)="submitForm()">
+            Recover
+          </button>
+          <div id="recaptcha"></div>
         </div>
         <!--  -->
-        <button mat-raised-button color="primary" type="submit">Submit</button>
         <br />
         <div class="links">
-          <a [routerLink]="['user']">Back to login</a>
+          <a [routerLink]="['']">Back to login</a>
         </div>
       </form>
     </div>
